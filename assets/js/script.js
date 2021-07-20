@@ -25,7 +25,7 @@ hasNotes = () => {
 createNote = () => {
 
     let noteText = $('#note').val(); // getting the text of the note
-  
+    let error = $('small')
     // building the object array to be pushed
   if (noteText != "") {  
 //should not run if textarea is empty
@@ -54,10 +54,13 @@ createNote = () => {
 
     // store
     localStorage.setItem("notesStore", JSON.stringify(notes));
-   
+   error.hide();
 } else if (noteText=== ''){
+    
+    error.show();
     console.log('warning, warning, empty note')
-    warning.text('Cannot add empty note 😉');
+    error.text('Cannot add empty note 😉');
+    error.css("color", "red");
 }
 
 }
