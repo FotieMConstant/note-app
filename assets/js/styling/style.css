@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+.container{
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.__addNote{
+    color: #626262;
+    background: var(--bg-color);
+    flex-basis: 75%;
+    position: sticky;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: rgba(206, 206, 83, 0.645);
+    align-self: flex-start ;
+    height: 90vh;
+
+}
+
+.__displayNote{
+    color: #626262;
+    flex-basis: 25%;
+    position: sticky;
+    /* z-index: 100; */
+    top: 0px;
+    border-right: 1px solid #626262;
+    background: whitesmoke;
+    overflow: hidden;
+    overflow-y: scroll;
+    align-self: flex-start;
+    height: 90.9vh;
+}
+/* .mainer{
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.working-utencils{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: #e6e5e5;
+    font-size: 20px;
+    padding: 5px 5%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: #626262;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+button{
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    margin-right: 19px;
+    border: none;
+    outline: none;
+    background: black;
+    padding: auto;
+}
+
+.typing-box{
+    display: flex;
+    bottom: 0;
+    /* background: blue; */
+    height: 1%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+}
+
+ul li{
+    background: #d1cece;
+    padding: 20px;
+    color: white;
+    margin: 10px 10px  0 10px;
+    border-radius: 10px;
+}
+
+.number-of-notes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: black;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+}
+
+.add p{
+    color: #358ee1;
+    cursor: pointer;
+}
+
+.text-container textarea{
+    width: 95%;
+    outline: none;
+    resize: none;
+    height: 70px;
+    padding: 10px  20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.text-container{
+    width: 100%;
+    /* background: red; */
+}

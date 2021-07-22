@@ -1,29 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800;1,900&display=swap"
+        rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/js/styling/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📓 Note App</title>
 </head>
+
 <body>
+    <div class="title">
+        <h3>Note App</h3>
+    </div>
     <div class="container">
-        <div align="center" class="__addNote">
-            <h3>Note App</h3>
-            <code>Premier Dev Bootcamp Developers</code>
-            <p>The smartest note taking app out there!</p>
-            <textarea id="note" placeholder="Your note here"></textarea>
-            <div>
-                <button id="addNote" type="button">Add</button>
-            </div>
-        </div>
         <div class="__displayNote">
-            📖 Your notes (<span id="warning">No note added yet 😉 </span>)
+            <div class="number-of-notes">
+                <div class="header">
+                    <h3> 📖 Your notes (<span id="warning">No note added yet 😉 </span>)</h3>
+                </div>
+                <div class="add">
+                    <p>Add</p>
+                </div>
+            </div>
             <ul>
             </ul>
         </div>
+
+        <div class="__addNote">
+            <div class="working-utencils">
+                <div class="bold">
+                    <i class="fa fa-bold"></i>
+                </div>
+                <div class="italic">
+                    <i class="fa fa-italic"></i>
+                </div>
+                <div class="underline">
+                    <i class="fa fa-underline"></i>
+                </div>
+                <div class="tobeknown">
+                    <i class="fa fa-hand-holding-usd"></i>
+                </div>
+                <div class="left">
+                    <i class="fa fa-align-left"></i>
+                </div>
+                <div class="list-ul">
+                    <i class="fa fa-list-ul"></i>
+                </div>
+                <div class="tobeknown">
+                    <i class="fa fa-infinity"></i>
+                </div>
+                <div class="link">
+                    <i class="fa fa-link"></i>
+                </div>
+                <div class="image">
+                    <i class="fa fa-image"></i>
+                </div>
+                <div class="imoji">
+                    <i class="fa fa-surprise"></i>
+                </div>
+                <div class="plus">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </div>
+            <div class="mainer">
+                <div class="typing-box">
+                    <div class="text-container">
+                        <textarea id="note" placeholder="Your note here"></textarea>
+                    </div>
+                    <button id="addNote" type="button">+</button>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
