@@ -22,9 +22,13 @@ hasNotes = () => {
 
 
 // function to create the ui and display the notes
-createNote = () =>{
+createNote = () => {
+
     let noteText = $('#note').val(); // getting the text of the note
+    let error = $('small')
     // building the object array to be pushed
+  if (noteText != "") {  
+//should not run if textarea is empty
     let noteObject = {
         id: notes.length,
         body: noteText
@@ -40,16 +44,27 @@ createNote = () =>{
     }else{
         warning.text("No note added yet 😉 ")
     }
-
     noteList.append("<li id='note_"+noteObject.id+"'>"+noteObject.body+"</li>");
     $("#note_"+noteObject.id).hide();
     $("#note_"+noteObject.id).fadeIn();
-
+    //empty textarea when note is added
+     var not = $.trim($('#note').val(''))
     console.log(notes);
+
 
     // store
     localStorage.setItem("notesStore", JSON.stringify(notes));
+   error.hide();
+} else if (noteText=== ''){
+    
+    error.show();
+    console.log('warning, warning, empty note')
+    error.text('Cannot add empty note 😉');
+    error.css("color", "red");
 }
+
+}
+
 
 // create notes event listener
 addButton.click(function () {
