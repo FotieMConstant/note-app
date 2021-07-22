@@ -1,8 +1,8 @@
 // console.log("Loading script.js..." );
 
 let notes = []; // all the notes of our app
-
-
+let noteso = $('#note').val();
+let noteKeeper = $('#notes-here')
 let addButton = $('#addNote');
 let noteList = $('ul'); // our list of notes which will contain li's
 let warning = $('#warning');
@@ -53,6 +53,7 @@ createNote = () =>{
 
 // create notes event listener
 addButton.click(function () {
+    noteKeeper = note
     createNote();
 })
 
@@ -76,5 +77,10 @@ if(hasNotes()){
 }else{
     warning.text("No note added yet 😉 ")
 }
+
+//grapping the notes from the textarea to the main div up
+// addButton.click( function(){
+//     noteso = noteKeeper
+// })
 
 console.log(notes)

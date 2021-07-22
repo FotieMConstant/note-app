@@ -100,7 +100,8 @@ button{
 ul li{
     background: #d1cece;
     padding: 20px;
-    color: white;
+    list-style: none;
+    color: black;
     margin: 10px 10px  0 10px;
     border-radius: 10px;
 }
@@ -110,9 +111,9 @@ ul li{
     align-items: center;
     justify-content: space-between;
     height: 50px;
-    background: black;
+    background: #e6e5e5;
     box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
-    color: white;
+    color:  black;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -126,15 +127,22 @@ ul li{
 
 .text-container textarea{
     width: 95%;
+    height: 100%;
     outline: none;
     resize: none;
-    height: 70px;
+    height: 100%;
     padding: 10px  20px;
     margin-left: 20px;
-    border-radius: 10px;
+    border-radius: 10px;st
 }
 
 .text-container{
     width: 100%;
-    /* background: red; */
+    height: 100%;
+}
+
+.note-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
