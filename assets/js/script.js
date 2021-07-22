@@ -44,7 +44,6 @@ createNote = () =>{
     noteList.append("<li id='note_"+noteObject.id+"'>"+noteObject.body+"</li>");
     $("#note_"+noteObject.id).hide();
     $("#note_"+noteObject.id).fadeIn();
-
     console.log(notes);
 
     // store
