@@ -16,7 +16,36 @@ let quill = new Quill('#editor-container', {
 // our note class
 class Note{
     constructor(){
-        this.notesArray = [];
+        this.notesArray = [
+            {
+            id : 0,
+            title : "bro 0",
+            body : "Msall body",
+            addedDate : "dateTime",    
+            lastModifiedDate : null
+            },
+            {
+            id : 1,
+            title : "bro 1",
+            body : "Msall body",
+            addedDate : "dateTime",    
+            lastModifiedDate : null
+            },
+            {
+            id : 2,
+            title : "bro 2",
+            body : "Msall body",
+            addedDate : "dateTime",    
+            lastModifiedDate : null
+            },
+            {
+            id : 3,
+            title : "bro 3",
+            body : "Msall body",
+            addedDate : "dateTime",    
+            lastModifiedDate : null
+            },
+        ];
     }
     // methods
     createNote(title, body){
@@ -28,7 +57,7 @@ class Note{
         let dateTime = date+' '+time;
         //  our note function
         const note = {
-            id : this.notesArray.length,
+            id : this.generateIds(),
             title : title,
             body : body,
             addedDate : dateTime,    
@@ -53,12 +82,31 @@ class Note{
 
      
     }
+    // generate todo id
+    generateIds() {
+        // we get the array of ids
+        let noteIds = [];
+        this.notesArray.map(item =>{
+            noteIds.push(item.id);
+        });
+        const generatedId = Math.max(...noteIds) +1;
+        return generatedId;
+
+    }
+    // get all todos
     getAllNotes() {
         return this.notesArray;
     }
+    // delete todo
+    deleteNote(noteId) {
+        console.log("Removing item eith id => "+noteId);
+        this.notesArray.map((item , index) =>{
+            if(item.id == noteId){
+                this.notesArray.splice(index, 1);
+            }
+        });
+    }
     // function to change background colour of a note
-    
-
 };
 //  End of class
 
@@ -82,6 +130,8 @@ $("#__addNotebtn").click( () => {
 
 
 });
-
+note.deleteNote(3);
+console.log("Deleted => "+note.generateIds());
+console.log(note.getAllNotes());
 
 
