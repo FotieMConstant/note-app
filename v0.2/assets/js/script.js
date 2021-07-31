@@ -7,7 +7,7 @@ let quill = new Quill('#editor-container', {
         ['image', 'code-block']
       ]
     },
-    placeholder: 'Compose an epic...',
+    placeholder: 'Your Note Here...',
     theme: 'snow'  // or 'bubble'
   });
 
