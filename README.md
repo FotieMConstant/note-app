@@ -8,7 +8,7 @@ Todo:
 - [x] Create note
 - [x] Read note
 - [ ] Update
-- [ ] Delete
+- [x] Delete
 
 ## New UI
 To-Do new UI:
