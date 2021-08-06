@@ -1,11 +1,18 @@
-// quilljsjs lib
+// quilljs lib
+
+const toolbarOptions = [
+  ['bold', 'italic', 'underline'],        
+  [ 'code-block'],
+  [{ 'align': [] }],                                        
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],      // superscript/subscript         // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction // custom dropdown
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  [{ 'font': [] }],
+  // remove formatting button
+];
 let quill = new Quill('#editor-container', {
     modules: {
-      toolbar: [
-        [{ header: [1, 2, false] }],
-        ['bold', 'italic', 'underline'],
-        ['image', 'code-block']
-      ]
+        toolbar: toolbarOptions
     },
     placeholder: 'Your Note Here...',
     theme: 'snow'  // or 'bubble'
