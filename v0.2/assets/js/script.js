@@ -11,6 +11,7 @@ let quill = new Quill('#editor-container', {
     theme: 'snow'  // or 'bubble'
   });
 
+//   console.log(quill.root.innerHTML)
 
 
 // our note class
@@ -39,7 +40,7 @@ class Note{
         // to make sure that the titles are never the same
         // check if already exitst
         if(this.notesArray.length != 0) {
-         const checkIfExists = this.notesArray.map(item => item.title).includes(note.title) ? true : false; ;
+         const checkIfExists = this.notesArray.map(item => item.title).includes(note.title) ? true : false;
             if(checkIfExists) {
                 return false;
             }else{
@@ -67,9 +68,12 @@ let note = new Note();
 $("#__addNotebtn").click( () => {
     console.log("You clicked!");
    let title = $("#__title").val();
-   let body =  $("#__body").val();
+   let body =  document.querySelector(".ql-editor").innerHTML;
+   $("ul").append(`${body}`)
+   console.log(body)
    let added = note.createNote(title, body);
-    console.log(added);
+   console.log(added);
+  
 
     // check if it was added
    if(added){
